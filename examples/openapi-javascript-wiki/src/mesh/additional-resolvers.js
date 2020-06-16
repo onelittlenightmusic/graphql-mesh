@@ -19,7 +19,7 @@ const resolvers = {
 
       return items[0].views;
     },
-    async viewsOver500K(_, { project }, { Wiki }) {
+    async viewsOver500K(obj, _, { Wiki }, info) {
       const pageviewTops = await Wiki.api.getMetricsPageviewsTopProjectAccessYearMonthDay(
         {
           project: "en.wikipedia.org",
@@ -27,7 +27,7 @@ const resolvers = {
           day: "31",
           month: "05",
           year: "2020"
-        }, {
+        },{
           fields: {
             items: {
               articles: {
@@ -36,15 +36,41 @@ const resolvers = {
             }
           }
         });
-      pageviewTops.items.forEach((item, index, array) => {
-        console.log(item);
-        array[index].articles = item.articles.filter(
-          element => {
-            return element.views >= 500000;
-          }
-        );
-      });
+      // pageviewTops.items.forEach((item, index, array) => {
+      //   array[index].articles = item.articles.filter(
+      //     element => {
+      //       return element.views >= 500000;
+      //     }
+      //   );
+      // });
       return pageviewTops;
+    },
+    async viewsTop(obj, _, { Wiki }, info) {
+      const pageviewTops = await Wiki.api.getMetricsPageviewsTopProjectAccessYearMonthDay(
+        {
+          project: "en.wikipedia.org",
+          access: "all-access",
+          day: "31",
+          month: "05",
+          year: "2020"
+        });
+      return pageviewTops;
+    }
+  },
+  PageviewTops: {
+    topViewArticleName: {
+      resolve: async (obj, _, { Wiki }, info) => {
+        return obj.items[0].articles[0].article;
+      },
+      selectionSet: `
+      {
+        items {
+          articles {
+            article
+          }
+        }
+      }
+      `
     }
   }
 };
