@@ -1,7 +1,7 @@
 {
   "name": "graphql-mesh",
   "license": "MIT",
-  "version": "0.2.10",
+  "version": "0.2.11",
   "private": true,
   "scripts": {
     "predeploy:website": "yarn generate-config-schema",
@@ -23,7 +23,7 @@
     "release:canary": "node scripts/release.js --canary"
   },
   "devDependencies": {
-    "@graphql-tools/schema": "6.0.9",
+    "@graphql-tools/schema": "6.0.10",
     "@types/jest": "26.0.0",
     "@types/node": "13.13.12",
     "jest": "26.0.1",
@@ -43,7 +43,7 @@
     "fs-extra": "9.0.1",
     "graphql": "15.1.0",
     "graphql-to-config-schema": "0.0.16",
-    "lint-staged": "10.2.9",
+    "lint-staged": "10.2.10",
     "globby": "11.0.1",
     "husky": "4.2.5",
     "prettier": "2.0.5"
