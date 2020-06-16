@@ -1,0 +1,21 @@
+query resolverFieldSelectionTest {
+  viewsOver500K(project: "en.wikipedia.com") {
+    topViewArticleName
+    items {
+      articles {
+        views
+      }
+    }
+  }
+}
+
+query resolverNoFieldSelectionTest {
+  viewsTop(project: "en.wikipedia.com") {
+    topViewArticleName
+    items {
+      articles {
+        views
+      }
+    }
+  }
+}
