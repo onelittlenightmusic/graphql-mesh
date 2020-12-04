@@ -2,7 +2,17 @@
 # yarn lockfile v1
 
 
-"@apollo/federation@0.16.5", "@apollo/federation@^0.16.5":
+"@apollo/federation@0.20.6":
+  version "0.20.6"
+  resolved "https://registry.yarnpkg.com/@apollo/federation/-/federation-0.20.6.tgz#f0b48177bb73214b256e5139736b3c9ace9aaf4a"
+  integrity sha512-ofk2bF+nRvbTZBgguSBm7lYRdbrG1w27OCRZo9qFpX9PxyQMMCB1FLOQXbeT+4QgjFuJhIZg6/LGnXd13o5uJw==
+  dependencies:
+    apollo-graphql "^0.6.0"
+    apollo-server-env "^2.4.5"
+    core-js "^3.4.0"
+    lodash.xorby "^4.7.0"
+
+"@apollo/federation@^0.16.5":
   version "0.16.5"
   resolved "https://registry.yarnpkg.com/@apollo/federation/-/federation-0.16.5.tgz#9ed004e323af6072a8b7827546887364f942d864"
   integrity sha512-2bVYWSJ68SYQaFyiI1cerviXZehmZIU35xPAN3Rj6ckLbv6pUugogwPjaimUtJBdPmRRK5YBpxMqdfUrn7RgCg==
@@ -3509,6 +3519,14 @@ apollo-graphql@^0.4.0:
     apollo-env "^0.6.5"
     lodash.sortby "^4.7.0"
 
+apollo-graphql@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/apollo-graphql/-/apollo-graphql-0.6.0.tgz#37bee7dc853213269137f4c60bfdf2ee28658669"
+  integrity sha512-BxTf5LOQe649e9BNTPdyCGItVv4Ll8wZ2BKnmiYpRAocYEXAVrQPWuSr3dO4iipqAU8X0gvle/Xu9mSqg5b7Qg==
+  dependencies:
+    apollo-env "^0.6.5"
+    lodash.sortby "^4.7.0"
+
 apollo-link-http-common@^0.2.15:
   version "0.2.16"
   resolved "https://registry.yarnpkg.com/apollo-link-http-common/-/apollo-link-http-common-0.2.16.tgz#756749dafc732792c8ca0923f9a40564b7c59ecc"
@@ -3563,10 +3581,10 @@ apollo-server-core@^2.14.3, apollo-server-core@^2.14.4:
     subscriptions-transport-ws "^0.9.11"
     ws "^6.0.0"
 
-apollo-server-env@^2.4.4:
-  version "2.4.4"
-  resolved "https://registry.yarnpkg.com/apollo-server-env/-/apollo-server-env-2.4.4.tgz#12d2d0896dcb184478cba066c7a683ab18689ca1"
-  integrity sha512-c2oddDS3lwAl6QNCIKCLEzt/dF9M3/tjjYRVdxOVN20TidybI7rAbnT4QOzf4tORnGXtiznEAvr/Kc9ahhKADg==
+apollo-server-env@^2.4.4, apollo-server-env@^2.4.5:
+  version "2.4.5"
+  resolved "https://registry.yarnpkg.com/apollo-server-env/-/apollo-server-env-2.4.5.tgz#73730b4f0439094a2272a9d0caa4079d4b661d5f"
+  integrity sha512-nfNhmGPzbq3xCEWT8eRpoHXIPNcNy3QcEoBlzVMjeglrBGryLG2LXwBSPnVmTRRrzUYugX0ULBtgE3rBFNoUgA==
   dependencies:
     node-fetch "^2.1.2"
     util.promisify "^1.0.0"
